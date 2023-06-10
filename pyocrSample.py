@@ -15,6 +15,7 @@
 # text = tool.image_to_string(img, lang="jpn", builder=builder)
 # text = text.replace(' ', '')
 # print(text)
+
 from PIL import Image
 import pyocr
 
@@ -25,4 +26,4 @@ engine = engines[0]
 # 画像の文字を読み込む
 builder = pyocr.builders.TextBuilder(tesseract_layout=6)
 txt = engine.image_to_string(Image.open('jpn2.png'), lang="jpn",builder=builder)
-print(txt) # 「Test Message」が出力される
+print(txt) 
